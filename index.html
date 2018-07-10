@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Story generator</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+
+	<header>
+		<h1 id="title">Story generator</h1>
+		<p id="intro">
+			This is a small story generator. For each of the criteria you would like to see generated, tick the box or assign a number
+			bigger than zero. If you are unsure what the categories are, hovver the question mark to have more details.
+			<br />Some criteria link to the site
+			<a href="https://tvtropes.org/" alt="tv tropes wiki">TV Tropes</a> from where most a the data comes from. Do not hesitate to visit the linked pages to have a full understanding
+			of the proposed trope.
+		</p>
+	</header>
+
+	<div id="content">
+
+		<form id="generator" method="post">
+
+			<fieldset id="literaryConstraints">
+
+				<legend>Literary Constraints</legend>
+
+				<fieldset class="questions">
+					<legend>Genre</legend>
+					<input type="number" min="0" name="genre" id="genre" value="1" />
+				</fieldset>
+
+				<fieldset class="questions">
+					<legend>Register</legend>
+					<input type="number" min="0" name="register" id="register" />
+				</fieldset>
+
+			</fieldset>
+
+			<fieldset id="storyConstraints">
+
+				<legend>Story Constraints</legend>
+				<fieldset class="questions">
+					<legend>Character(s)</legend>
+					<label>How many characters</label>
+					<input type="number" min="0" name="characterType" id="characterType" />
+					<br/>
+					<label>Do you also wish to have a role attributed to each generated character ?</label>
+					<input type="checkbox" name="characterFunction" id="characterFunction" />
+				</fieldset>
+
+				<fieldset class="questions">
+					<legend>Character as device</legend>
+					<input type="number" min="0" name="deviceCharacter" id="characterAsDevice" />
+				</fieldset>
+
+				<fieldset class="questions">
+					<legend>Characterisation</legend>
+					<input type="number" min="0" name="characterization" id="characterization" />
+				</fieldset>
+
+				<fieldset class="questions">
+					<legend>Plot</legend>
+					<input type="number" min="0" name="plot" id="plot" />
+				</fieldset>
+
+				<fieldset class="questions">
+					<legend>Setting</legend>
+					<input type="number" min="0" name="setting" id="setting" />
+				</fieldset>
+
+				<fieldset class="questions">
+					<legend>Narrative Device</legend>
+					<input type="number" min="0" name="narrativeDevice" id="narrativeDevice" />
+				</fieldset>
+
+			</fieldset>
+
+			<fieldset id="otherConstraints">
+
+				<legend>Contraintes diverses</legend>
+				<fieldset class="questions">
+					<legend>Universe</legend>
+					<input type="number" min="0" name="universe" id="universe" />
+				</fieldset>
+
+				<fieldset class="questions">
+					<legend>Sentence</legend>
+					<input type="number" min="0" name="sentence" id="sentence" />
+				</fieldset>
+
+				<fieldset class="questions">
+					<legend>Object</legend>
+					<input type="number" min="0" name="objectNb" id="object" />
+				</fieldset>
+
+			</fieldset>
+
+			<input id="validation" type="button" value="Submit" onClick="generateStory()" />
+
+		</form>
+
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: arial, helvetica, sans-serif;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: rgb(100, 200, 0);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  color: white;
+}
+
+#title {
+  margin: 1rem 0 1.2rem;
+  align-self: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3em
+}
+
+#intro {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  bottom: 0.6rem;
+}
+
+#content {
+  padding: 0.5rem;
+  color: gray;
+}
+
+#generator {
+  display: grid;
+  grid-template-areas: "a b" "a c" "s s";
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.5rem;
+}
+
+#storyConstraints {
+  grid-area: a;
+}
+
+#literaryConstraints {
+  grid-area: b;
+}
+
+#otherConstraints {
+  grid-area: c;
+}
+
+#literaryConstraints,
+#storyConstraints,
+#otherConstraints {
+  border-radius: 5px;
+}
+
+#validation {
+  grid-area: s;
+}
+
+.questions {
+  border: none;
+  border-top: 2px solid lightgray;
+  margin: 0.5rem 0.2rem 0.2rem;
+}
+
+.questions>legend {}
+
+#result {
+  padding: 0.5rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+}
+
+#result>article {
+  padding: 0.5rem;
+  border: 1px solid gray;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#result>article>h3 {
+  border-top: 1px dotted black;
+  border-bottom: 1px solid black;
+}
+
+#result>article>ol {
+  vertical-align: middle;
+  list-style: number outside;
+  width: 100%;
+}
